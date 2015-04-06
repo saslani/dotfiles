@@ -1,0 +1,37 @@
+[user]
+  name = saslani
+  email = sarah@testedminds.com
+[alias]
+  st = status
+  br = branch
+  ci = commit
+  co = checkout
+  logp = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  pr = pull --rebase
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = green
+  remote = red
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[core]
+  excludesfile = "~/.gitignore_global"
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[push]
+  default = simple
+[remote "origin"]
+  push = HEAD
