@@ -6,9 +6,6 @@ find . -name ".*" -o -name "*.bash" | \
     grep -v .git$ | \
     sed 's/^.\///g' | \
     tail -n +2 | \
-    xargs -I% ln -sf $DIR/% $HOME/%
+    xargs -I% rm $HOME/%
 
 ll ~
-
-# http://emacsformacosx.com/emacs-builds/Emacs-2015-04-05_01-41-26-16eec6f-universal.dmg
-cp emacs/* /usr/local/bin/
