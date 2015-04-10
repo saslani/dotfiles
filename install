@@ -8,7 +8,7 @@ find . -name ".*" -o -name "*.bash" | \
     tail -n +2 | \
     xargs -I% ln -sf $DIR/% $HOME/%
 
-ll ~
+ls -al ~
 
 # http://emacsformacosx.com/emacs-builds/Emacs-2015-04-05_01-41-26-16eec6f-universal.dmg
 cp emacs/* /usr/local/bin/
