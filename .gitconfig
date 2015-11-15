@@ -1,6 +1,6 @@
 [user]
-  name = saslani
-  email = sarah@testedminds.com
+  name = Sarah Aslanifar
+  email = Sarah.Aslanifar@morningstar.com
 [alias]
   st = status
   br = branch
@@ -35,3 +35,5 @@
   default = simple
 [remote "origin"]
   push = HEAD
+[url "https://github.com"]
+  insteadOf = git://github.com

@@ -3,28 +3,35 @@ export EDITOR='emacsclient'
 export LESS="-Nmsx4erX"
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:$PATH
 export LSCOLORS=gxfxcxdxbxegedabagacad
-export JAVA_HOME=`/usr/libexec/java_home`
-export JDK_HOME=`/usr/libexec/java_home`
+#export JAVA_HOME=`/usr/libexec/java_home`
+#export JDK_HOME=`/usr/libexec/java_home`
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home'
+export JDK_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home'
 export RBENV_ROOT=/usr/local/var/rbenv
+export GROOVY_HOME='/Library/groovy/groovy-2.4.5/'
 
+alias idea="/Applications/IntelliJ\ IDEA\ 13.app/Contents/MacOS/idea"
 alias ls="ls -G"
 alias ll="ls -alG"
 alias more="less"
 alias tree="tree -C"
+alias ping="ping -c 10"
 alias be="bundle exec"
-alias gremlin="~/dev/gremlin/gremlin-groovy-1.5/gremlin-groovy.sh"
 alias mvn-skip="mvn package -Dmaven.test.skip=true"
+alias gremlin="~/dev/gremlin/latest/bin/gremlin.sh"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias mongostart="mongod run --config /usr/local/etc/mongod.conf"
 alias dev="cd ~/dev"
-alias practice="cd ~/dev/practice"
 alias pi="pip install -r requirements.txt"
 alias vgs="vagrant global-status --prune"
 alias utc="date -u"
 alias gpr="git pull --rebase"
+alias gst="git status"
 alias emacs="emacs -nw"
 alias ec="emacsclient -n"
+alias htop="sudo htop"
+alias top=htop
 
 PROMPT_DIRTRIM=2
 
@@ -53,12 +60,14 @@ complete -C aws_completer aws
 . /usr/local/etc/bash_completion.d/docker
 . ~/make_target_completion.bash
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-if [ -e $HOME/.homesick/repos/homeshick/homeshick.sh ]; then
-  source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-  source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
+# user-specific settings that aren't version controlled.
+private_settings="$HOME/.`whoami`.bashrc"
+if [ -e $private_settings ]; then
+    . $private_settings
 fi
 
-export PATH=${PATH}:~/android_sdk/tools
-export PATH=${PATH}:~/android_sdk/platform-tools
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/saslani/.sdkman"
+[[ -s "/Users/saslani/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/saslani/.sdkman/bin/sdkman-init.sh"
