@@ -1,0 +1,5 @@
+.config/*
+.lein/repl-history
+.lein/self-installs
+.lein/repl-port
+.bnorton.bashrc
