@@ -1456,11 +1456,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-<<<<<<< HEAD
-	<string>~/Documents/dev/dotfiles/iterm2</string>
-=======
 	<string>~/dev/dotfiles/iterm2</string>
->>>>>>> c37cf388e2676cbe608c11393b6d4068a8b73553
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -1469,38 +1465,12 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
-<<<<<<< HEAD
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>302</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
-	<key>NSWindow Frame Preferences</key>
-	<string>269 110 605 485 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-7 271 1430 606 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>79 153 1180 706 0 0 1440 877 </string>
-=======
 	<key>NSWindow Frame Preferences</key>
 	<string>263 269 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 104 1440 766 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>312 338 810 526 0 0 1440 877 </string>
->>>>>>> c37cf388e2676cbe608c11393b6d4068a8b73553
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -2235,11 +2205,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-<<<<<<< HEAD
-			<string>/Users/sarah</string>
-=======
 			<string>/Users/bnorton</string>
->>>>>>> c37cf388e2676cbe608c11393b6d4068a8b73553
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -2936,17 +2902,6 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-<<<<<<< HEAD
-			<string>/Users/sarah/Documents/dev</string>
-		</dict>
-	</array>
-	<key>NoSyncNeverRemindPrefsChangesCopy</key>
-	<true/>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>465076824.616256</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>477438271.22076499</real>
-=======
 			<string>/Users/saslani/dev/</string>
 		</dict>
 	</array>
@@ -2954,7 +2909,6 @@
 	<real>453188733.35724998</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
 	<real>469254464.37421101</real>
->>>>>>> c37cf388e2676cbe608c11393b6d4068a8b73553
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -3001,11 +2955,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-<<<<<<< HEAD
-	<string>/Users/sarah/Documents/dev/dotfiles/iterm2</string>
-=======
 	<string>/Users/saslani/dev/dotfiles/iterm2</string>
->>>>>>> c37cf388e2676cbe608c11393b6d4068a8b73553
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -3023,11 +2973,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-<<<<<<< HEAD
-	<date>2016-02-17T21:34:11Z</date>
-=======
 	<date>2015-11-15T04:26:18Z</date>
->>>>>>> c37cf388e2676cbe608c11393b6d4068a8b73553
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
