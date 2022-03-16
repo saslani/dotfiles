@@ -13,6 +13,9 @@
   pr = pull --rebase
 [color]
   ui = auto
+  interactive = always
+[color "interactive"]
+  error = red bold
 [color "branch"]
   current = yellow reverse
   local = green
@@ -31,3 +34,10 @@
 [push]
   default = simple
 
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[pager]
+  branch = false

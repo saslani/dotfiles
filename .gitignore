@@ -3,4 +3,5 @@
 .lein/self-installs
 .lein/repl-port
 .bnorton.bashrc
-.idea/
+.idea/*
+.DS_Store/*

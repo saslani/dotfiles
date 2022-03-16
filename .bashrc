@@ -1,12 +1,17 @@
 export SHELL=/usr/local/bin/bash
-export EDITOR='emacsclient'
+export EDITOR='vim'
 export LESS="-Nmsx4erX"
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:$PATH
-export LSCOLORS=gxfxcxdxbxegedabagacad
-export JAVA_HOME=`/usr/libexec/java_home`
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/heroku/bin:$HOME/.fastlane/bin:/Users/saslani/Library/Android/sdk/platform-tools:/Applications/Genymotion.app/Contents/MacOS/tools/:/usr/local/Cellar/node/9.5.0/libexec/bin:$PATH
+export NLS_LANG="American_America.UTF8"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
 export JDK_HOME=`/usr/libexec/java_home`
 export RBENV_ROOT=/usr/local/var/rbenv
+export ANDROID_SDK=/Users/myuser/Library/Android/sdk
 
+# Makefile
+complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
+
+# alias
 alias ls="ls -G"
 alias ll="ls -alG"
 alias more="less"
@@ -15,6 +20,7 @@ alias ping="ping -c 10"
 alias be="bundle exec"
 alias mvn-skip="mvn package -Dmaven.test.skip=true"
 alias dev="cd ~/dev"
+alias devmynd="cd ~/dev/devmynd"
 alias pi="pip install -r requirements.txt"
 alias vgs="vagrant global-status --prune"
 alias utc="date -u"
@@ -24,13 +30,30 @@ alias emacs="emacs -nw"
 alias ec="emacsclient -n"
 alias htop="sudo htop"
 alias top=htop
+alias dc="docker-compose"
+
+# docker attach sdge_dev_api_1
+alias dca="docker attach"
+
+# docker exec api bundle install
+# docker exec api /bin/bash
+alias dce="docker-compose exec"
+
+# docker-compose run api rails c
+alias dcr="docker-compose run"
+
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
 
 PROMPT_DIRTRIM=2
 
 if [ -n "$INSIDE_EMACS" ]; then
   PS1="[\w]\$ "
 else
-  PS1="[\t][\u:\w]\$ "
+  function pc {
+    [ -d .git ] && git name-rev --name-only @
+  }
+  PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 2)\]\t]\[$(tput setaf 4)\] \W\\$ \[$(tput sgr0)\]"
 fi
 
 # python env: virtualenv, virtualenvwrapper, and autoenv
@@ -58,3 +81,11 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+export NVM_DIR="/Users/saslani/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+complete -C /usr/local/bin/vault vault
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+. "$HOME/.cargo/env"
